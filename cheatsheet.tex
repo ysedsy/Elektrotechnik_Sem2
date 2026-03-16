@@ -1,0 +1,177 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage[left=1.0cm, right=1.0cm, top=1cm, bottom=1cm]{geometry}
+\begin{document}
+	\twocolumn
+	\section{Das SI-System}
+	
+	\begin{tabular}{|l|l|l|l|}
+		\hline\tiny
+		\textbf{Zehnerpotenz} & \textbf{Vorsilbe} & \textbf{Kurzzeichen} & \textbf{Beispiel} \\
+		\hline
+		$10^{18}$ & Exa & E & EV \\
+		$10^{15}$ & Peta & P & PV \\
+		$10^{12}$ & Tera & T & TV \\
+		$10^{9}$ & Giga & G & GHz \\
+		$10^{6}$ & Mega & M & MHz \\
+		$10^{3}$ & Kilo & k & K$\Omega$ \\
+		$10^{2}$ & Hekto & h & hl \\
+		$10^{1}$ & Deka & da & daA \\
+		$10^{0}$ & & & \\
+		$10^{-1}$ & Dezi & d & dm \\
+		$10^{-2}$ & Zenti & C & cm \\
+		$10^{-3}$ & Milli & m & mA \\
+		$10^{-6}$ & Mikro & $\mu$ & $\mu$A \\
+		$10^{-9}$ & Nano & n & nV \\
+		$10^{-12}$ & Piko & p & pF \\
+		$10^{-15}$ & Femto & f & fF \\
+		$10^{-18}$ & Atto & a & aF \\
+		\hline
+	\end{tabular}
+	
+	\section{Elektrisches Feld \& Kapazität}
+	
+	Bei mehreren Feldern:
+	Feldstärke $\vec{E}$ am Ort für die Ladung $Q_{0}$ im Ort $\vec{r_{0}}:$
+	$\vec{E}(\vec{r})=\frac{Q_{0}}{4\pi\epsilon\cdot||\vec{r}-\vec{r_{0}}||}\cdot\frac{\vec{r}-\vec{r_{0}}}{||\vec{r}-\vec{r_{0}}||}$
+	$E_{res}(\vec{r})=\sum_{i}E_{i}(\vec{r})$
+	
+	Homogene elektrische Feldstärke E
+	$E=\frac{U}{d}=\frac{Q}{\epsilon_{0}\epsilon_{r}A}$ $\left[\SI{1}{\volt\per\meter}\right]$
+	mit $d=$ Plattenabstand, $\epsilon_{0}=8.854187817 \times 10^{-12}$
+	\SI{}{\volt\per\meter}
+	
+	\section{Elektrische Energie \& Leistung}
+	Elektrische Leistung P:
+	$P=U\cdot I=\frac{U^{2}}{R}=I^{2}\cdot R$ $\left[\SI{1}{\watt}=\SI{1}{\joule\per\second}=\SI{1}{\volt\ampere}=\SI{1}{\kilogram\meter\squared\per\second\cubed}\right]$
+	Elektrische Energie $E_{el}$:
+	$E_{el}=U\cdot I\cdot t$ $\left[\SI{1}{\watt\second}=\SI{1}{\joule}=\SI{1}{\newton\meter}=\SI{1}{\volt\ampere\second}=\SI{1}{\volt}\right]$
+	Elektrische Kapazität
+	$C=\frac{Q}{U}$
+	$\left[\SI{1}{\farad}=\SI{1}{\ampere\second\per\volt}\right]$
+	Parallelschaltung von Kondensatoren:
+	$C_{ges}=C_{1}+C_{2}+\cdot\cdot\cdot+C_{n}$
+	Reihenschaltung von Kondensatoren:
+	$\frac{1}{C_{ges}}=\frac{1}{C_{1}}+\frac{1}{C_{2}}+\cdot\cdot\cdot+\frac{1}{C_{n}}$
+	Kinetische Energie $E_{kin}$
+	$E_{kin}=\frac{1}{2}\cdot m\cdot v^{2}$
+	$\left[\SI{1}{\joule}\right]$
+	Potentielle Energie $E_{pot}$
+	$E_{pot}=m\cdot g\cdot h$
+	$\left[\SI{1}{\joule}\right]$
+	Thermische Energie $E_{th}$
+	$E_{th}=m\cdot c\cdot\Delta T$
+	$\left[\SI{1}{\joule}\right]$
+	mit m Masse, $c=$ spezifische Wärmekapazität und $\triangle T=$ Temperaturdifferenz
+	Tabelle 1: Umrechnung von Energieeinheiten
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		& \multicolumn{3}{c|}{\textbf{Umrechnung in}} \\
+		\textbf{} & \textbf{J, Ws} & \textbf{kcal} & \textbf{kWh} \\
+		\hline
+		\textbf{J, Ws} & 1 & $2.39\cdot10^{-4}$ & $2.78\cdot10^{-7}$ \\
+		\textbf{kcal} & 4186 & 1 & $1.16\cdot10^{-3}$ \\
+		\textbf{kWh} & $3.6\cdot10^{6}$ & 860 & 1 \\
+		\hline
+	\end{tabular}
+	
+	\section{Elektrischer Widerstand}
+	
+	Elektrischer Widerstand $R$:
+	$R=\frac{U}{I}$
+	$\left[\SI{1}{\ohm}\right]$
+		Elektrische Widerstände Parallel:
+	$$R_{ges}=\frac{1}{\frac{1}{R_{1}}+\frac{1}{R_{2}}+...+\frac{1}{R_{n}}}$$
+	\section{Auf- und Entladung eines Kondensators}
+	
+	Feldenergie im Kondensator:
+	$E=\frac{1}{2}\cdot C\cdot U^{2}$
+	
+	Aufladung:
+	$U_{C}(t)=U_{0}\cdot(1-e^{-\frac{t}{\tau}})=U_{0}\cdot(1-e^{-\frac{t}{R_{C}\cdot C}})$
+	$I_{C}(t)=\frac{U_{0}}{R_{C}}\cdot e^{-\frac{t}{\tau}}=I_{0}\cdot e^{-\frac{t}{R_{C}\cdot C}}$
+	
+	Während des Entladevorgangs eines Kondensators gilt:
+	$U_{C}(t)=U_{0}\cdot e^{-\frac{t}{\tau}}=U_{0}\cdot e^{-\frac{t}{R_{C}\cdot C}}$
+	$I_{C}(t)=-\frac{U_{0}}{R_{C}}\cdot e^{-\frac{t}{\tau}}=-I_{0}\cdot e^{-\frac{t}{R_{C}\cdot C}}$
+	
+	Um die Lade-/Entladezeit bis zu einer bestimmten Spannung zu bestimmen, stellt man die Lade- / Entladeformeln nach $t$ um.
+	$-\tau\cdot \ln\left(1-\frac{U}{U_{0}}\right)=t$
+	
+	Elektrische Widerstände in Reihe:
+	$R_{ges}=R_{1}+R_{2}+...+R_{n}$
+	
+	mit
+	$\tau=R_{C}\cdot C$
+	
+	\section{Magnetisches Feld \& Induktion}
+	
+	Die Gesamtenergie des Magnetfelds einer stromdurchflossenen Spule beträgt:
+	$E=\frac{1}{2}LI^{2}$
+	
+	Die magnetische Flussdichte B:
+	$B=\mu\cdot\vec{H}$
+	$\left[\SI{1}{\tesla}=\SI{1}{\newton\per\ampere\meter}=\SI{1}{\volt\second\per\meter\squared}\right]$
+	$H=\frac{I}{2\pi r}$ $\left[\SI{1}{\ampere\per\meter}\right]$
+	
+	Die Stärke eines Feldes um einen stromdurchflossenen Leiter hängt hauptsächlich von der Stromstärke I ab.
+	Es wird mit zunehmender Entfernung $r$ schwächer.
+	$B=\mu_{0}\cdot\mu_{r}\cdot\frac{I}{2\pi r}$
+	
+	Die Stärke eines Feldes um eine Spule hängt neben der Stromstärke I auch von der Windungszahl N und der Länge $l$ ab.
+	$B=\mu_{0}\cdot\mu_{r}\cdot\frac{N\cdot I}{l}$
+	
+	Induktion
+	$U=+\frac{d\Phi}{dt}$
+	wobei der magnetische Fluss
+	$\Phi=\int_{A}\vec{B}\cdot d\vec{A}$
+	ist.
+	
+	Vereinfachung für eine Leiterschleife:
+	$U=-\frac{d}{dt}\int_{A}\vec{B}\cdot d\vec{A}$
+	
+	\section{Komplexe Wechselströme}
+	
+	\subsection{Effektivwerte}
+	$I=\frac{\hat{i}}{\sqrt{2}}$
+	$U=\frac{\hat{u}}{\sqrt{2}}$
+	
+	\subsection{Komplexe Darstellung von Wechselströmen}
+	$u(t)=\hat{u}\sin(\omega t+\varphi_{u})=\hat{u}e^{j(\omega t+\varphi_{u})}$
+	$i(t)=\hat{i}\sin(\omega t+\varphi_{i})=\hat{i}e^{j(\omega t+\varphi_{i})}$
+	$\underline{Z_{C}}=\frac{1}{j\omega C}=-j\omega C$
+	$\underline{Z_{L}}=j\omega L$
+	
+	\subsection{Komplexe Leistung}
+	
+	Momentanleistung
+	$p(t)=U\cdot I\cdot \cos\varphi-U\cdot I\cdot \cos(2\omega t+\varphi_{u}+\varphi_{i})$
+	$I(t)=\frac{\overline{U}}{\omega L}\sin(\omega\cdot t+\varphi-\frac{\pi}{2})$
+	
+	Mittlere Leistung:
+	$P=U\cdot I\cdot \cos~\varphi$
+	$\varphi=\varphi_{i}-\varphi_{u}$
+	
+	Scheinleistung:
+	$S=U\cdot I$
+	
+	Blindleistung:
+	$Q=U\cdot I~\sin\varphi=XI^{2}$
+	
+	Wirkleistung:
+	$P=U\cdot I~\cos\varphi=RI^{2}$
+	
+	\subsection{Komplexer Widerstand}
+	
+	Komplexer Widerstand:
+	$\underline{Z}=R+jX$
+	
+	Blindwiderstand:
+	$X_{L}=\omega L$
+	$X_{C}=-\frac{1}{\omega C}$
+	
+\end{document}
